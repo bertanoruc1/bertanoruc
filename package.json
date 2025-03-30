@@ -1,0 +1,26 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build && nuxt generate",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/content": "^3.1.0",
+    "@nuxt/icon": "1.10.3",
+    "@nuxthq/studio": "^2.2.1",
+    "nodemailer": "^6.10.0",
+    "nuxt": "^3.15.4",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@iconify-json/lucide": "^1.2.25",
+    "@unocss/nuxt": "^65.4.3",
+    "unocss": "^65.4.3"
+  }
+}

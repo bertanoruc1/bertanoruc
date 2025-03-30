@@ -1,0 +1,13 @@
+name = "bertanoruc"
+type = "javascript"
+account_id = "d251a1989ad2fa679d946b48bfc3bd0c"
+workers_dev = true
+compatibility_date = "2025-02-08"
+
+[site]
+bucket = "./public"
+entry-point = "workers-site"
+
+[env.production]
+route = "orucbertan7.workers.dev"
+zone_id = "d251a1989ad2fa679d946b48bfc3bd0c"
