@@ -7,9 +7,14 @@
             Bilgisayar <br> Programcısı
           </h1> 
         </div>
-        <img src="/images/IMG_0523.jpeg" alt="Bertan Örüç"
-          class="rounded-full w-72 h-72 md:w-96 md:h-96 object-cover object-top hidden md:block flex justify-end ml-14 flex align-end"
-        />
+        <div class="flex justify-center md:justify-end">
+  <img
+    src="/images/IMG_0523.jpeg"
+    alt="Bertan Örüç"
+    class="rounded-full w-72 h-72 md:w-96 md:h-96 object-cover object-top md:ml-80"
+  />
+</div>
+
       </div>
   
       <div id="about" class="m-16">
@@ -94,9 +99,7 @@
       </div>
       <Contact />
     </div>
-    <div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24850.767570916658!2d32.771273100081594!3d38.870326190682675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d3e1ec458be103%3A0x2a3389d76de99374!2sYeniceoba%2C%2042890%20Cihanbeyli%2FKonya!5e0!3m2!1str!2str!4v1739465465456!5m2!1str!2str" width="600" height="450" style="border:0; margin-left: 10px; border-radius: 5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
+    
   </template>
   <script setup>
   import { useHead } from 'nuxt/app'

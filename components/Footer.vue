@@ -29,7 +29,7 @@ import { socialLinks } from '~/constants/nav';
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Tüm Hakları Saklıdır. | <a href="#">Gizlilik Politikası</a> | <a href="#">Kullanım Şartları</a></p>
+                <p style="display: flex; justify-content: center; align-items: center;">&copy; 2025 Tüm Hakları Saklıdır. | <a href="#">Gizlilik Politikası</a> | <a href="#">Kullanım Şartları</a></p>
             </div>
         </div>
     </footer>

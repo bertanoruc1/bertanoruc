@@ -5,5 +5,3 @@
 
 </template>
 
-<style>
-</style>
