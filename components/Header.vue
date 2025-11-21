@@ -6,7 +6,11 @@ import { navs, socialLinks } from '~/constants/nav';
   <header>
     <div class="container mx-auto flex flex-col md:flex-row items-center justify-between p-4 gap-4">
       <div class="flex items-center gap-2">
+<<<<<<< HEAD
         <img src="/public/b.png" alt="" class="w-20 h-20">
+=======
+        <img src="/public/logo.png" alt="" class="w-20 h-15">
+>>>>>>> fb9713b (İlk commit)
         <NuxtLink to="/" class="font-bold text-xl">
           Bertan Örüç
         </NuxtLink>

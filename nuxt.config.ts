@@ -10,12 +10,27 @@ export default defineNuxtConfig({
   ],
 
   css: [
+<<<<<<< HEAD
     '@unocss/reset/tailwind.css'
   ],
   app: {
     head: {
       link: [
         { rel: "icon", type: "image/x-icon",  href: "/b.png" },
+=======
+    '@unocss/reset/tailwind.css',
+    //'assets/css/animations.css'   // <-- animasyon dosyası eklendi
+
+  ],
+    plugins: [
+    "~/plugins/email.js"
+  ],
+
+  app: {
+    head: {
+      link: [
+        { rel: "icon", type: "image/x-icon", href: "/b.png" },
+>>>>>>> fb9713b (İlk commit)
         { rel: "icon", type: "image/png", href: "/b.png" }
       ]
     }
@@ -25,5 +40,9 @@ export default defineNuxtConfig({
     gmailUser: process.env.GMAIL_USER,
     gmailPass: process.env.GMAIL_PASS,
   }
+<<<<<<< HEAD
 
 })
+=======
+});
+>>>>>>> fb9713b (İlk commit)
