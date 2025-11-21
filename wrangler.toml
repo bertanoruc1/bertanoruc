@@ -1,2 +1,6 @@
+# wrangler.toml
 name = "bertanoruc"
+type = "javascript"
+
+# Build edilen dosyaların yolu
 pages_build_output_dir = ".output/public"

@@ -5,5 +5,5 @@ export default defineConfig({
     presetUno(),
     presetIcons(),
     presetTypography(),
-  ]
+  ],
 })

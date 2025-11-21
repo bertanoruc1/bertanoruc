@@ -10,27 +10,18 @@ export default defineNuxtConfig({
   ],
 
   css: [
-
-    '@unocss/reset/tailwind.css'
-  ],
-  app: {
-    head: {
-      link: [
-        { rel: "icon", type: "image/x-icon",  href: "/b.png" },
-
     '@unocss/reset/tailwind.css',
-    //'assets/css/animations.css'   // <-- animasyon dosyası eklendi
-
+    // 'assets/css/animations.css' <-- animasyon dosyası eklenebilir
   ],
-    plugins: [
-    "~/plugins/email.js"
+
+  plugins: [
+    '~/plugins/email.js'
   ],
 
   app: {
     head: {
       link: [
         { rel: "icon", type: "image/x-icon", href: "/b.png" },
-
         { rel: "icon", type: "image/png", href: "/b.png" }
       ]
     }
@@ -40,9 +31,4 @@ export default defineNuxtConfig({
     gmailUser: process.env.GMAIL_USER,
     gmailPass: process.env.GMAIL_PASS,
   }
-
-
-})
-
 });
-
