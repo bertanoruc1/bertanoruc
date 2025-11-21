@@ -1,40 +1,8 @@
 <template>
-  <section class="px-6 md:px-20">
-    <div class="mt-10">
-      <h2 class="text-5xl mb-10 text-center font-bold">Hakkımda</h2>
-      <p class="text-lg text-center mx-auto mb-10 max-w-3xl leading-relaxed">
-        Merhaba, ben <span class="font-semibold">Bertan Örüç</span>. 22 yaşında, bilgisayar programcılığı eğitimi almış ve yazılım dünyasında kendini geliştirmeye devam eden bir yazılımcıyım.
-        Erzincan'da eğitimimi tamamladıktan sonra yazılım geliştirme alanında ilerlemeye odaklandım.
-        Aynı zamanda <span class="font-semibold">YouTube'da yazılım eğitim içerikleri</span> üretiyorum ve teknolojiye olan ilgimi, öğrendiklerimi paylaşarak pekiştiriyorum.
-        Hedefim, yazılım dünyasında sağlam bir yer edinerek sürekli öğrenmek ve üretmektir.
-      </p>
-
-      <div class="flex flex-col md:flex-row justify-between gap-5 mt-10 text-balance">
-        <div class="flex flex-1 flex-col p-6 rounded-2xl shadow-md text-white" style="background-color: #03595E;">
-          <h3 class="text-2xl mb-3 font-semibold text-[#4caf50]">Misyonum</h3>
-          <p class="text-base leading-relaxed">
-            Yenilikçi çözümler üreterek, yazılım dünyasında sürekli gelişen bir bakış açısıyla projeler oluşturmak.
-            Teknolojiyi en iyi şekilde kullanarak her seviyeden bireye ulaşan, öğretici ve ilham verici içerikler sunmak.
-          </p>
-        </div>
-
-        <div class="flex flex-1 flex-col p-6 rounded-2xl shadow-md" style="background-color: #03595E;">
-          <h3 class="text-2xl mb-3 font-semibold text-[#4caf50]">Vizyonum</h3>
-          <p class="text-base leading-relaxed">
-            Küresel çapta tanınan, güvenilir ve ilham veren bir yazılımcı olmak.
-            Yalnızca kod yazmak değil, aynı zamanda değer yaratan projeler geliştirerek yazılım dünyasında kalıcı bir etki bırakmayı hedefliyorum.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Contact -->
-    <div class="mt-10">
-      <Contact />
-    </div>
-
-    <!-- Alternatif Hakkımda ve Vizyon/Misyon Bölümü -->
-    <section class="px-6 md:px-20 py-16 text-white">
+  <!-- min-h-screen ile sayfanın minimum yüksekliğini ayarlıyoruz -->
+  <section class="px-6 md:px-20 py-16 text-white min-h-screen">
+    <div class="max-w-6xl mx-auto">
+      <!-- Ana Hakkımda Bölümü -->
       <div class="mb-12">
         <h2 class="text-5xl font-extrabold mb-6 border-b-4 border-[#4caf50] inline-block pb-2">
           Hakkımda
@@ -49,9 +17,12 @@
         </p>
       </div>
 
+      <!-- Vizyon/Misyon Kartları (Glow ve Şeffaflık Efektleri Eklendi) -->
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="relative group p-8 rounded-3xl bg-gray-800 shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:-translate-y-2">
-          <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-5 transition-opacity pointer-events-none rounded-3xl"></div>
+        <!-- Misyon Kartı -->
+        <div class="card-glow-effect group p-8 rounded-3xl shadow-xl border border-gray-700/50 
+                    bg-gray-900/70 overflow-hidden transition-transform duration-300 transform 
+                    hover:scale-[1.03] hover:-translate-y-1 relative cursor-pointer">
           <h3 class="text-3xl mb-4 font-bold text-[#4caf50]">Misyonum</h3>
           <p class="text-gray-100 leading-relaxed text-base">
             Yenilikçi ve özgün çözümler üretmek, teknolojiyi insanlara değer katacak şekilde kullanmak.
@@ -59,8 +30,10 @@
           </p>
         </div>
 
-        <div class="relative group p-8 rounded-3xl bg-gray-800 shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:-translate-y-2">
-          <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-5 transition-opacity pointer-events-none rounded-3xl"></div>
+        <!-- Vizyon Kartı -->
+        <div class="card-glow-effect group p-8 rounded-3xl shadow-xl border border-gray-700/50 
+                    bg-gray-900/70 overflow-hidden transition-transform duration-300 transform 
+                    hover:scale-[1.03] hover:-translate-y-1 relative cursor-pointer">
           <h3 class="text-3xl mb-4 font-bold text-[#4caf50]">Vizyonum</h3>
           <p class="text-gray-100 leading-relaxed text-base">
             Küresel çapta tanınan, güvenilir ve yaratıcı bir yazılımcı olmak.
@@ -69,17 +42,45 @@
         </div>
       </div>
 
+      <!-- Bana Ulaş Butonu -->
       <div class="mt-16 text-center">
-        <a href="contact" class="px-8 py-4 bg-[#4caf50] text-black font-semibold rounded-full shadow-lg hover:bg-[#43a047] transition-colors duration-300">
+        <!-- Nuxt projesi olduğu için NuxtLink kullanıldı -->
+        <NuxtLink to="/contact" class="px-8 py-4 bg-[#4caf50] text-black font-semibold rounded-full shadow-lg hover:bg-[#43a047] transition-colors duration-300 hover:shadow-[#4caf50]/40">
           Bana Ulaş
-        </a>
+        </NuxtLink>
       </div>
-    </section>
+    </div>
   </section>
 </template>
 
+<script setup>
+import { NuxtLink } from '#components'
+// Bu bileşenin çalışması için sadece template yeterlidir
+</script>
+
 <style scoped>
-.group:hover::after {
-  opacity: 0.05;
+/* Kartlara Hover Glow Efekti için CSS */
+.card-glow-effect {
+  /* Z-index bağlamını oluşturur, böylece ::before elementi kartın arkasında kalır */
+  isolation: isolate; 
+}
+
+.card-glow-effect::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  /* Yeşil/Mavi Karışımı Parlama Efekti */
+  background: radial-gradient(circle at center, rgba(76, 175, 80, 0.4), transparent 70%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  /* Başlangıçta biraz daha küçük */
+  transform: scale(0.9);
+}
+
+.card-glow-effect:hover::before {
+  opacity: 0.8; /* Hover'da parlamayı göster */
+  transform: scale(1.2); /* Parlamayı karttan daha büyük yap */
 }
 </style>
