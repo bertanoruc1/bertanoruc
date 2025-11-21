@@ -1,9 +1,4 @@
 name = "bertanoruc"
-type = "javascript"
-account_id = "YOUR_ACCOUNT_ID"
-workers_dev = true
-route = ""
-zone_id = ""
 
-# Build edilen dosyaların yolu
-pages_build_output_dir = "dist"
+# Nuxt 3 build output klasörü
+pages_build_output_dir = ".output/public"
