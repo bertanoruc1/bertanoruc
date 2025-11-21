@@ -30,7 +30,7 @@ export default defineNuxtConfig({
     head: {
       link: [
         { rel: "icon", type: "image/x-icon", href: "/b.png" },
-   fb9713b (İlk commit)
+
         { rel: "icon", type: "image/png", href: "/b.png" }
       ]
     }
@@ -45,4 +45,4 @@ export default defineNuxtConfig({
 })
 
 });
->>>>>>> fb9713b (İlk commit)
+
