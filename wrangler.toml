@@ -1,6 +1,10 @@
-# wrangler.toml
+
 name = "bertanoruc"
 type = "javascript"
+account_id = "b3b00703295a42aec42dae3782344f904d6de"
+workers_dev = true
+compatibility_date = "2025-11-21"
 
-# Build edilen dosyaların yolu
-pages_build_output_dir = ".output/public"
+[build]
+command = "npm run build"
+pages_build_output_dir = "dist" # Veya Nuxt için "output/public"

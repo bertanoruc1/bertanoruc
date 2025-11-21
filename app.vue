@@ -1,14 +1,4 @@
 <template>
-
-<script setup lang="ts">
-import contentConfig from './content.config';
-
-</script>
-
-
-<template>
-  
- fb9713b (İlk commit)
   <div>
     <NuxtRouteAnnouncer />
     <Header />
@@ -17,15 +7,17 @@ import contentConfig from './content.config';
   </div>
 </template>
 
+<script setup lang="ts">
+// Hatalı satır kaldırıldı:
+// import contentConfig from '~/content.config.ts'; 
+// Bu yapılandırma dosyası, Nuxt Content Modülü tarafından 
+// otomatik olarak işlenmelidir, ana bileşende doğrudan içe aktarılmaz.
+
+// Başka bir script içeriği eklenmediği sürece burası boş kalabilir.
+</script>
+
 <style>
-
-#__nuxt,
-html,
-body {
- background-color: #03595E;
-  color: #F2EFEA;
-
-
+/* Temel sayfa ayarları */
 #__nuxt,
 html,
 body {
@@ -35,7 +27,7 @@ body {
     radial-gradient(circle at 80% 70%, rgba(0,200,255,0.05), transparent 60%),
     #0c0f10;
 
-  /* Teknik blog hissi için grid */
+  /* Teknik blog/grid hissi için overlay */
   background-image:
     linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
@@ -53,7 +45,5 @@ body {
   background-attachment: fixed;
   color: #e8e8e8;
   min-height: 100vh;
-
-fb9713b (İlk commit)
 }
 </style>

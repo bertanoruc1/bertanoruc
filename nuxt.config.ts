@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   modules: [
     '@unocss/nuxt',
     '@nuxt/icon',
-    '@nuxt/content',
+    '@nuxt/content', // Content modülü burada
   ],
 
   css: [

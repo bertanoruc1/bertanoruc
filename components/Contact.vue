@@ -1,29 +1,6 @@
 <template>
-<<<<<<< HEAD
-<section class="py-10">
-    <div class="container mx-auto">
-        <h2 class="text-3xl mb-2.5">İletişim</h2>
-        <p class="mb-5">Bize mesaj gönderin, en kısa sürede dönüş yapacağız!</p>
-        <form action="https://formspree.io/f/xgvalrwe" id="contact-form" method="POST">
-            <div class="mb-3.75">
-                <label for="name" class="block font-bold">Adınız</label>
-                <input type="text" id="name" name="name" required placeholder="Adınızı girin" class="w-full p-2.5 border border-neutral-200 rounded-md focus:outline-[#4caf50] focus:outline-2 focus:outline-offset-2 text-black">
-            </div>
-            <div class="mb-3.75">
-                <label for="email" class="block font-bold">E-posta</label>
-                <input type="email" id="email" name="email" required placeholder="E-postanızı girin" class="w-full p-2.5 border border-neutral-200 rounded-md focus:outline-[#4caf50] focus:outline-2 focus:outline-offset-2 text-black">
-            </div>
-            <div class="mb-3.75">
-                <label for="message" class="block font-bold">Mesajınız</label>
-                <textarea id="message" name="message" required placeholder="Mesajınızı yazın" rows="4" class="w-full p-2.5 border border-neutral-200 rounded-md focus:outline-[#4caf50] focus:outline-2 focus:outline-offset-2 text-black"></textarea>
-            </div>
-            <button type="submit" class="bg-[#4caf50] text-white px-5 py-3 border-none rounded-md cursor-pointer transition-colors" >Gönder</button>
-        </form>
-    </div>
-</section>
-</template>
-
-=======
+  <!-- Sadece EmailJS ile çalışan Vue formunu tutuyoruz. 
+       Statik Formspree formu (ilk <section>) ve hatalı yapı kaldırıldı. -->
   <section class="py-16 px-6">
     <div class="max-w-2xl mx-auto">
       <h2 class="text-4xl font-bold mb-4 text-center">İletişim</h2>
@@ -49,8 +26,9 @@
 
       <form @submit.prevent="sendMail" class="space-y-6">
         <div>
-          <label class="font-semibold block mb-1">Adınız</label>
+          <label for="name-input" class="font-semibold block mb-1">Adınız</label>
           <input
+            id="name-input"
             v-model="form.name"
             type="text"
             class="p-3 w-full rounded-md border border-gray-700 bg-gray-800 text-white focus:ring-2 focus:ring-[#4caf50]"
@@ -60,8 +38,9 @@
         </div>
 
         <div>
-          <label class="font-semibold block mb-1">E-posta</label>
+          <label for="email-input" class="font-semibold block mb-1">E-posta</label>
           <input
+            id="email-input"
             v-model="form.email"
             type="email"
             class="p-3 w-full rounded-md border border-gray-700 bg-gray-800 text-white focus:ring-2 focus:ring-[#4caf50]"
@@ -71,8 +50,9 @@
         </div>
 
         <div>
-          <label class="font-semibold block mb-1">Mesajınız</label>
+          <label for="message-input" class="font-semibold block mb-1">Mesajınız</label>
           <textarea
+            id="message-input"
             v-model="form.message"
             rows="5"
             class="p-3 w-full rounded-md border border-gray-700 bg-gray-800 text-white focus:ring-2 focus:ring-[#4caf50]"
@@ -84,7 +64,9 @@
         <button
           type="submit"
           :disabled="loading"
-          class="w-full py-3 text-lg font-semibold rounded-md transition bg-[#4caf50] hover:bg-[#45a346] disabled:opacity-50"
+          class="w-full py-3 text-lg font-semibold rounded-md transition duration-300 ease-in-out 
+                 bg-[#4caf50] hover:bg-[#45a346] hover:shadow-lg hover:shadow-[#4caf50]/50 
+                 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <span v-if="!loading">Gönder</span>
           <span v-else>Gönderiliyor...</span>
@@ -94,15 +76,15 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
-
-// Nuxt 3 plugin kullanımı için emailjs importunu plugin üzerinden yapacağız
-// plugins/email.js oluşturman gerekiyor (daha stabil)
 import { useNuxtApp } from "#app";
 
+// TypeScript kullanımı için <script setup> içinde lang="ts" kullanıldı.
+// EmailJS'in Nuxt plugin'i olarak yüklendiği varsayılır.
 const { $emailjs } = useNuxtApp();
 
+// State yönetimi
 const loading = ref(false);
 const success = ref(false);
 const error = ref(false);
@@ -113,12 +95,17 @@ const form = ref({
   message: "",
 });
 
+/**
+ * Form verilerini EmailJS servisi üzerinden gönderir.
+ */
 const sendMail = async () => {
+  // Durumları sıfırla ve yükleniyor durumunu başlat
   loading.value = true;
   success.value = false;
   error.value = false;
 
   try {
+    // EmailJS API çağrısı
     await $emailjs.send(
       "service_chy964n",     // EmailJS Service ID
       "template_bw3owcl",    // EmailJS Template ID
@@ -127,24 +114,27 @@ const sendMail = async () => {
     );
 
     success.value = true;
+    // Başarılı gönderim sonrası formu temizle
     form.value = { name: "", email: "", message: "" };
   } catch (err) {
-    console.log(err);
+    // Orijinal kodunuzdaki console.log yerine daha açıklayıcı bir hata logu bıraktım.
+    console.error("EmailJS Gönderim Hatası:", err); 
     error.value = true;
+  } finally {
+    // Yükleniyor durumunu bitir
+    loading.value = false;
+
+    // Mesaj 3 sn sonra kaybolsun (Orijinal süreyi koruduk)
+    setTimeout(() => {
+      success.value = false;
+      error.value = false;
+    }, 3000); // Orijinal süreniz 3000ms idi.
   }
-
-  loading.value = false;
-
-  // Mesaj 3 sn sonra kaybolsun
-  setTimeout(() => {
-    success.value = false;
-    error.value = false;
-  }, 3000);
 };
 </script>
 
-<style>
-/* Yumuşak Fade Animasyonu */
+<style scoped>
+/* Yumuşak Fade Animasyonu (scoped eklendi) */
 @keyframes fade {
   from { opacity: 0; transform: translateY(-5px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -152,5 +142,4 @@ const sendMail = async () => {
 .animate-fade {
   animation: fade 0.4s ease;
 }
-</style>
->>>>>>> fb9713b (İlk commit)
+</style>,
