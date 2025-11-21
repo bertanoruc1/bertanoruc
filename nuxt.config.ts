@@ -4,12 +4,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
-    '@unocss/nuxt',
+    '@unocss/nuxt',  // UnoCSS artık modül olarak eklendi
     '@nuxt/icon',
     '@nuxt/content', // Content modülü burada
   ],
 
   css: [
+    // UnoCSS 65.x sürümü için reset artık modül içinden import ediliyor
     '@unocss/reset/tailwind.css',
     // 'assets/css/animations.css' <-- animasyon dosyası eklenebilir
   ],
@@ -30,5 +31,16 @@ export default defineNuxtConfig({
   runtimeConfig: {
     gmailUser: process.env.GMAIL_USER,
     gmailPass: process.env.GMAIL_PASS,
+  },
+
+  // Ek: UnoCSS 65.x için global config
+  unocss: {
+    // optionları buraya ekleyebilirsin, örnek:
+    preflight: true, // tailwind reset benzeri
+    theme: {
+      colors: {
+        primary: '#7e22ce'
+      }
+    }
   }
 });
