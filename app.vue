@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 <template>
-=======
+
 <script setup lang="ts">
 import contentConfig from './content.config';
 
@@ -9,7 +8,7 @@ import contentConfig from './content.config';
 
 <template>
   
->>>>>>> fb9713b (İlk commit)
+ fb9713b (İlk commit)
   <div>
     <NuxtRouteAnnouncer />
     <Header />
@@ -19,13 +18,13 @@ import contentConfig from './content.config';
 </template>
 
 <style>
-<<<<<<< HEAD
+
 #__nuxt,
 html,
 body {
  background-color: #03595E;
   color: #F2EFEA;
-=======
+
 
 #__nuxt,
 html,
@@ -55,6 +54,6 @@ body {
   color: #e8e8e8;
   min-height: 100vh;
 
->>>>>>> fb9713b (İlk commit)
+fb9713b (İlk commit)
 }
 </style>
