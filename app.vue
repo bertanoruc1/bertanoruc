@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 // Hatalı satır kaldırıldı:
-// import contentConfig from '~/content.config.ts'; 
+//  import contentConfig from '~/content.config.ts'; 
 // Bu yapılandırma dosyası, Nuxt Content Modülü tarafından 
 // otomatik olarak işlenmelidir, ana bileşende doğrudan içe aktarılmaz.
 

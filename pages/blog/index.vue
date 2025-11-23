@@ -7,12 +7,15 @@
       <!-- 1 WEB TARAYICILARIN DÜNYASI -->
       <div class="card">
         <div class="card-inner-1" style="display: flex; flex-direction: column; justify-content: center;">
-          <div class="font-bold mt-2">WEB TARAYICILARIN DÜNYASI VE HTTP’YE YAKINDAN BAKIŞ ÖNEMİ</div>
+          <div class="flex items-center gap-2">
+            <i class="i-mdi-web text-2xl"></i>
+            <div class="font-bold mt-2">WEB TARAYICILARIN DÜNYASI VE HTTP’YE YAKINDAN BAKIŞ ÖNEMİ</div>
+          </div>
           <div class="mb-2">
             Bu makale benim 2022 de yazdığım ilk makaledir incelemek için tıklayınız.
           </div>
           <div class="text-blue-500">
-            <a href="https://bertanoruc.com/blog/ilk-makalem" target="_blank">Gitmek için tıklayınız.</a>
+            <NuxtLink to="https://bertanoruc.com/blog/ilk-makalem">Gitmek için tıklayınız.</NuxtLink>
           </div>
         </div>
       </div>
@@ -20,12 +23,15 @@
       <!-- 2 Authentication Sistemi -->
       <div class="card">
         <div class="card-inner-1">
-          <div class="font-bold mt-2">Authentication Sistemi</div>
+          <div class="flex items-center gap-2">
+            <i class="i-mdi-shield-lock text-2xl"></i>
+            <div class="font-bold mt-2">Authentication Sistemi</div>
+          </div>
           <div class="mb-2">
             Bu makale benim 2025 de yazdığım makaledir incelemek için tıklayınız.
           </div>
           <div class="text-blue-500">
-            <a href="https://bertanoruc.com/blog/ikinci-makalem" target="_blank">Gitmek için tıklayınız.</a>
+            <NuxtLink to="https://bertanoruc.com/blog/ikinci-makalem">Gitmek için tıklayınız.</NuxtLink>
           </div>
         </div>
       </div>
@@ -37,14 +43,15 @@
         </video>
         <div class="overlay"></div>
         <div class="card-inner z-top text-white">
-          <div class="font-bold text-lg mt-2">Form Sayfası</div>
+          <div class="flex items-center gap-2">
+            <i class="i-mdi-account-plus text-2xl"></i>
+            <div class="font-bold text-lg mt-2">Form Sayfası</div>
+          </div>
           <div class="mb-2">
             Kullanıcılar için hazırlanmış modern ve kullanışlı bir kayıt panelidir.
           </div>
           <div class="text-blue-300 font-semibold">
-            <a href="https://github.com/bertanoruc1/kullan-c-kay-t-paneli" target="_blank" class="hover:underline">
-              Gitmek için tıklayınız.
-            </a>
+            <a href="https://github.com/bertanoruc1/kullan-c-kay-t-paneli" target="_blank" class="hover:underline">Gitmek için tıklayınız.</a>
           </div>
         </div>
       </div>
@@ -54,7 +61,10 @@
         <div class="bg-media" :style="{ backgroundImage: `url('/denme-1.png')` }"></div>
         <div class="overlay"></div>
         <div class="card-inner z-top text-white">
-          <div class="font-bold mt-2">Blog sayfası</div>
+          <div class="flex items-center gap-2">
+            <i class="i-mdi-blog text-2xl"></i>
+            <div class="font-bold mt-2">Blog sayfası</div>
+          </div>
           <div class="mb-2">Kullanıcılar için oluşturulmuş blog uygulamasıdır.</div>
           <div class="text-blue-200">
             <a href="https://github.com/bertanoruc1/blog-uygulamas-" target="_blank">Gitmek için tıklayınız.</a>
@@ -67,7 +77,10 @@
         <div class="bg-media" :style="{ backgroundImage: `url('/kitap.png')` }"></div>
         <div class="overlay"></div>
         <div class="card-inner z-top text-white">
-          <div class="font-bold">Kitap deposu</div>
+          <div class="flex items-center gap-2">
+            <i class="i-mdi-book-open-page-variant text-2xl"></i>
+            <div class="font-bold">Kitap deposu</div>
+          </div>
           <div class="mb-2">Kullanıcıların kitaplarını depolamak için kullanması gereken uygulamadır.</div>
           <div class="text-blue-200">
             <a href="https://github.com/bertanoruc1/kitap-deposu" target="_blank">Gitmek için tıklayınız.</a>
@@ -82,7 +95,10 @@
         </video>
         <div class="overlay"></div>
         <div class="card-inner z-top text-white">
-          <div class="font-bold text-lg">Kelime Oyunu</div>
+          <div class="flex items-center gap-2">
+            <i class="i-mdi-alpha-k-circle text-2xl"></i>
+            <div class="font-bold text-lg">Kelime Oyunu</div>
+          </div>
           <div class="mb-2">C# ile oluşturulmuş basit ve eğlenceli kelime oyunu.</div>
           <div class="text-blue-300">
             <a href="https://github.com/bertanoruc1/kelime-uygulamas-" target="_blank">Gitmek için tıklayınız.</a>
@@ -97,7 +113,10 @@
         </video>
         <div class="overlay"></div>
         <div class="card-inner z-top text-white">
-          <div class="font-bold text-lg opacity-90">İnteraktif To-Do List</div>
+          <div class="flex items-center gap-2">
+            <i class="i-mdi-format-list-checks text-2xl"></i>
+            <div class="font-bold text-lg opacity-90">İnteraktif To-Do List</div>
+          </div>
           <div class="mb-2">Modern ve kullanımı kolay bir yapılacaklar listesi. Vue 3 ile geliştirildi.</div>
           <div class="text-blue-300">
             <a href="https://github.com/bertanoruc1/interaktif-To-Do-List-Yap-lacaklar-Listesi-" target="_blank">Gitmek için tıklayınız.</a>
@@ -110,7 +129,10 @@
         <div class="bg-media" :style="{ backgroundImage: `url('/yapılacaklar.png')` }"></div>
         <div class="overlay"></div>
         <div class="card-inner z-top text-white">
-          <div class="font-bold text-lg">To-Do List</div>
+          <div class="flex items-center gap-2">
+            <i class="i-mdi-check-circle text-2xl"></i>
+            <div class="font-bold text-lg">To-Do List</div>
+          </div>
           <div class="mb-2">Vue3 ile interaktif, kullanıcı dostu yapılacaklar listesi.</div>
           <div class="text-blue-300">
             <a href="https://github.com/bertanoruc1/To-Do-liste-uygulmas--" target="_blank">Gitmek için tıklayınız.</a>
@@ -125,7 +147,10 @@
         </video>
         <div class="overlay"></div>
         <div class="card-inner z-top text-white">
-          <div class="font-bold text-lg">Kullanıcı Uygulamaları</div>
+          <div class="flex items-center gap-2">
+            <i class="i-mdi-account-group text-2xl"></i>
+            <div class="font-bold text-lg">Kullanıcı Uygulamaları</div>
+          </div>
           <div class="mb-2">Sayaç, geri sayım ve To-Do List’in birleştiği uygulama.</div>
           <div class="text-blue-300">
             <a href="https://github.com/bertanoruc1/kullan-c-uygulamalar-" target="_blank">Gitmek için tıklayınız.</a>

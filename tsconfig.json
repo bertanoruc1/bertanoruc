@@ -1,6 +1,13 @@
 {
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
-    "types": ["node", "nuxt", "unocss", "@nuxt/content"]
+    "types": [
+      "node",
+      "nuxt",
+      "unocss",
+      "@nuxt/content",
+      "nuxt-icon"
+    ],
+    "lib": ["ESNext", "DOM"]
   }
 }

@@ -37,6 +37,7 @@ export const socialLinks = [
         label: 'twitter',
         to: 'https://www.twitter.com/bertanorc42',
         icon: 'i-lucide-twitter',
+        
     },
     {
         label: 'LinkedIn',
