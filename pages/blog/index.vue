@@ -15,7 +15,7 @@
             Bu makale benim 2022 de yazdığım ilk makaledir incelemek için tıklayınız.
           </div>
           <div class="text-blue-500">
-            <NuxtLink to="https://bertanoruc.com/blog/ilk-makalem">Gitmek için tıklayınız.</NuxtLink>
+            <NuxtLink to="bertanoruc/blog/ilk-makalem">Gitmek için tıklayınız.</NuxtLink>
           </div>
         </div>
       </div>
@@ -31,7 +31,7 @@
             Bu makale benim 2025 de yazdığım makaledir incelemek için tıklayınız.
           </div>
           <div class="text-blue-500">
-            <NuxtLink to="https://bertanoruc.com/blog/ikinci-makalem">Gitmek için tıklayınız.</NuxtLink>
+            <NuxtLink to="~/blog/ikinci-makalem">Gitmek için tıklayınız.</NuxtLink>
           </div>
         </div>
       </div>
