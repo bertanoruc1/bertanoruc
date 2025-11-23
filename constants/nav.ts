@@ -1,4 +1,3 @@
-
 export const navs = [
     {
         label: 'Anasayfa',

@@ -5,7 +5,9 @@ import { z } from 'zod'
 export default defineContentConfig({
   collections: {
     blog: defineCollection({
-      type: 'data', // veya 'data' seçebilirsin
+      // Hata: 'content' türü beklenmiyor.
+      // Düzeltme: Markdown içeriği (dosya tabanlı) için 'page' kullanın.
+      type: 'page', 
       schema: z.object({
         title: z.string(),
         description: z.string().optional(),

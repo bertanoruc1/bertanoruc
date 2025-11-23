@@ -1,30 +1,22 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import UnoCSS from '@unocss/nuxt'
-import { presetIcons } from 'unocss/preset-icons'
-
 export default defineNuxtConfig({
+  compatibilityDate: "2025-02-12",
+  devtools: { enabled: true },
+
   modules: [
-    UnoCSS,
+    '@unocss/nuxt',
     '@nuxt/content'
   ],
-
-  unocss: {
-    presets: [
-      presetIcons()
-    ]
-  },
-
-  nitro: {
-    prerender: {
-      ignore: [
-        '/__nuxt_content/**'  // Nuxt Content dosyalarını prerender etme
-      ]
-    }
-  },
 
   css: [
     '@unocss/reset/tailwind.css'
   ],
+
+  unocss: {
+    presets: [
+      require, '@unocss/preset-icons'
+    ]
+  },
 
   app: {
     head: {
@@ -39,4 +31,4 @@ export default defineNuxtConfig({
     gmailUser: process.env.GMAIL_USER,
     gmailPass: process.env.GMAIL_PASS
   }
-})
+});
