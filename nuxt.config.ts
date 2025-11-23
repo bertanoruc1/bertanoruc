@@ -5,6 +5,7 @@ import { presetIcons } from 'unocss/preset-icons'
 export default defineNuxtConfig({
   modules: [
     UnoCSS,
+    '@nuxt/content'  ,
     '@nuxt/content',
     'nuxt-icon'
   ],
@@ -25,7 +26,7 @@ export default defineNuxtConfig({
 
   css: [
     '@unocss/reset/tailwind.css',
-    '~/assets/css/main.css'  // Eğer varsa kendi global CSS dosyan
+      '/Users/bertanorc42/Desktop/bertanoruc/components/assets/css/main.css'
   ],
 
   app: {
