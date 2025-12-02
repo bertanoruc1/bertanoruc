@@ -25,7 +25,6 @@ export default defineNuxtConfig({
 
   css: [
     '@unocss/reset/tailwind.css',
-      
   ],
 
   app: {
@@ -33,6 +32,13 @@ export default defineNuxtConfig({
       link: [
         { rel: "icon", type: "image/x-icon", href: "/logo.png" },
         { rel: "icon", type: "image/png", href: "/logo.png" }
+      ],
+      script: [
+        {
+          src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4988130168935631",
+          async: true,
+          crossorigin: "anonymous"
+        }
       ]
     }
   },
